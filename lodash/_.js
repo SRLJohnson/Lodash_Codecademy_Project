@@ -7,17 +7,17 @@ const _ = {
   inRange(x, y, z) {
     let startValue = y;
     let endValue = z;
-    if (z === undefined) {
-      let endValue = y;
-      let startValue = 0;
+    if (endValue === undefined) {
+      endValue = y;
+      startValue = 0;
     } else {
-      let endValue = z;
-      let startValue = y;
+      endValue = z;
+      startValue = y;
     }
     if (startValue > endValue) {
       let swapValue = startValue;
-      let startValue = endValue;
-      let endValue = swapValue;
+      startValue = endValue;
+      endValue = swapValue;
     }
     if (x >= startValue && x <= endValue) {
       return true
@@ -25,6 +25,19 @@ const _ = {
       return false
     }
   }
+  /*inRange(number, start, end) {
+    if (end === undefined) {
+      end = start;
+      start = 0;
+    }
+    if (start > end) {
+      let temp = end;
+      end = start;
+      start = temp;
+    }
+    let isInRange = Boolean(start <= number && number <= end);
+    return isInRange
+  }*/
 };
 
 console.log(_.inRange(1, 2));
