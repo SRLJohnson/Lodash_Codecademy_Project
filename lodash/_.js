@@ -1,9 +1,11 @@
 const _ = {
+
   clamp(x, y, z) {
     let lowerBound = Math.max(x, y);
     let upperBound = Math.min(lowerBound, z);
     return upperBound;
   },
+
   inRange(x, y, z) {
     let startValue = y;
     let endValue = z;
@@ -24,7 +26,9 @@ const _ = {
     } else {
       return false
     }
-  }
+  },
+
+  //code written after following Codecademy step by step
   /*inRange(number, start, end) {
     if (end === undefined) {
       end = start;
@@ -38,7 +42,13 @@ const _ = {
     let isInRange = Boolean(start <= number && number < end);
     return isInRange
   }*/
+
+  words(string) {
+    return string.split(' ');
+  }
 };
+
+
 
 // Do not write or modify code below this line.
 module.exports = _;
