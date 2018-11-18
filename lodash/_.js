@@ -19,7 +19,7 @@ const _ = {
       startValue = endValue;
       endValue = swapValue;
     }
-    if (x >= startValue && x <= endValue) {
+    if (x >= startValue && x < endValue) {
       return true
     } else {
       return false
@@ -35,12 +35,10 @@ const _ = {
       end = start;
       start = temp;
     }
-    let isInRange = Boolean(start <= number && number <= end);
+    let isInRange = Boolean(start <= number && number < end);
     return isInRange
   }*/
 };
-
-console.log(_.inRange(1, 2));
 
 // Do not write or modify code below this line.
 module.exports = _;
