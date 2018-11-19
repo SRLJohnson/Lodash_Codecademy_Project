@@ -45,6 +45,16 @@ const _ = {
 
   words(string) {
     return string.split(' ');
+  },
+
+  pad(string, length) {
+    if (string.length === length) {
+      return string;
+    }
+    let padStart = Math.floor((length - string.length) / 2);
+    let padEnd = length - (string.length + padStart);
+    let padSpace = ' ';
+    return padSpace.repeat(padStart) + string + padSpace.repeat(padEnd);
   }
 };
 
