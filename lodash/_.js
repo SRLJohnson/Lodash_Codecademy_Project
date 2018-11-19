@@ -48,7 +48,10 @@ const _ = {
   },
 
   pad(string, length) {
-    if (string.length === length) {
+    if (length < 0) {
+      length *= -1;
+    }
+    if (string.length >= length) {
       return string;
     }
     let padStart = Math.floor((length - string.length) / 2);
@@ -57,7 +60,6 @@ const _ = {
     return padSpace.repeat(padStart) + string + padSpace.repeat(padEnd);
   }
 };
-
 
 
 // Do not write or modify code below this line.
