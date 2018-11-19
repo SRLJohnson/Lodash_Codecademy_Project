@@ -58,6 +58,22 @@ const _ = {
     let padEnd = length - (string.length + padStart);
     let padSpace = ' ';
     return padSpace.repeat(padStart) + string + padSpace.repeat(padEnd);
+  },
+
+  has(object, key) {
+    let hasValue = object.hasOwnProperty(key);
+
+    /*if (object.key !== undefined && object.key !== null) {
+      return true;
+    } else {
+      return false;
+    }*/
+
+    //let hasValue = object.key !== undefined ? true : false;
+
+    //let hasValue = Boolean(object.key !== undefined);
+
+    return hasValue;
   }
 };
 
